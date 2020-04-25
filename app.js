@@ -11,26 +11,6 @@ var data           =   [
 var chart_width     =   800;
 var chart_height    =   400;
 var padding = 50;
-var data = [
-    { date: "04/01/2020", num: 20 },
-    { date: "04/02/2020", num: 37 },
-    { date: "04/03/2020", num: 25 },
-    { date: "04/04/2020", num: 45 },
-    { date: "04/05/2020", num: 23 },
-    { date: "04/06/2020", num: 33 },
-    { date: "04/07/2020", num: 49 },
-    { date: "04/08/2020", num: 40 },
-    { date: "04/09/2020", num: 36 },
-    { date: "04/10/2020", num: 27 }
-];
-
-var time_parse = d3.timeParse("%m/%d/%Y");
-var time_format = d3.timeFormat("%b %e")
-
-//Loop through each date
-data.forEach(function(e, i){
-    data[i].date = time_parse(e.date);
-});
 
 //Create SVG Element
 var svg = d3.select("#chart")
@@ -39,7 +19,7 @@ var svg = d3.select("#chart")
     .attr("height",chart_height)
 
 // Create Scales
-var x_scale = d3.scaleTime()
+var x_scale = d3.scaleLinear()
     .domain([
         d3.min(data, function(d){
             return d.date;
