@@ -13,14 +13,6 @@
     font-weight: bold;
     font-size: 11px;
 }
-.y-axis path .y-axis line{
-    shape-rendering: crispEdges;
-}
-.y-axis text{
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-}
 #tooltip{
     position: absolute;
     width: 60px;

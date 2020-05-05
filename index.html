@@ -8,10 +8,14 @@
 <body>
     <p>The population in Osaka City</p>
     <div id="chart">
-        <div id="tooltip"></div>
+        
     </div>
     <hr>
-    <button type="button">Update</button>
+    <form id="dataSelect">
+        <input type="button" data-pop="pop_199510" value="1995年">
+        <input type="button" data-pop="pop_202004" value="2020年">
+    </form>
+    <div id="tooltip"></div>
     <script src="https://d3js.org/d3.v5.js"></script>
     <script src="app.js"></script>
 </body>
